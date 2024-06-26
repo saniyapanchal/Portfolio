@@ -3,7 +3,7 @@ import { ProjectsCard } from "../lib/interface";
 import { client } from "../lib/sanity";
 
 async function getData() {
-    const query = `*[_type == 'project'] | order(_createdAt desc) [0..2] {
+    const query = `*[_type == 'project'] | order(_createdAt desc) [0...2] {
     title,
         _id,
         link,
